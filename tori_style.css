@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    background-color: #1d272f;
+}
+
+/* HEADER AREA */
+.wave-header {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(315deg, rgba(24, 78, 119,1) 3%, rgba(30, 96, 145,1) 38%, rgba(22, 138, 173,1) 68%, rgba(52, 160, 164,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 0;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 5000% 5000% 0 0;
+    position: absolute;
+    width: 200%;
+    height: 10em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2%   { transform: translateX(1); }
+    25%  { transform: translateX(-25%); }
+    50%  { transform: translateX(-50%); }
+    75%  { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
+}
+
+#introduction {
+    font-size: 13px; 
+    overflow: auto; 
+    width: 30vw; 
+    height: 30vh;
+    color: white;
+    padding: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3a649f;
+  }
+
+  .carousel-item.active {
+    display: block; /* Only show the active slide */
+}
+
+/* Position the previous control (left) */
+.carousel-control-prev {
+    left: -4vw;  /* Position it to the far left */
+    z-index: 5; /* Ensure it's above the carousel items */
+    position: absolute;
+}
+
+/* Position the next control (right) */
+.carousel-control-next {
+    right: -4vw;  /* Position it to the far right */
+    z-index: 5; /* Ensure it's above the carousel items */
+    padding-right: 20px; /* Optional: Add some padding to move it away from the edge */
+}
+
+#demo {
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /*background-color: black;*/
+}
+
+
+  .bi {
+    padding: 5px;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+  }
+
+  .navbar {
+    font-family: "Space Mono", monospace;
+  }
+
+  h3 {
+    font-family: "Space Mono", monospace;
+  }
+
+  h4 {
+    font-family: "Xanh Mono", monospace;
+  }
+
+  #thumbnail_txt {
+    font-family: 'Space Mono', monospace;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Xanh+Mono:ital@0;1&display=swap');
